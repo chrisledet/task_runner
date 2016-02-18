@@ -1,4 +1,4 @@
-require_relative "lib/task_runner"
+require File.join(__dir__, "lib", "task_runner")
 
 Gem::Specification.new do |s|
   s.name        = "task_runner"
