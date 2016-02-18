@@ -23,7 +23,7 @@ We will output the word “foo” to the console 3 times
 ```ruby
 require ‘task_runner’
 
-# we have a simple task that prints “foo” to the console
+# we have a simple task that prints “foo”
 class Foo
   def say
     print ‘foo!’
@@ -33,18 +33,18 @@ end
 # we want run 3 foo tasks
 tasks = [Foo.new, Foo.new, Foo.new]
 
-# create a runner and provide a common set of objects
+# create a runner and provide a set of objects
 runner = TaskRunner.new(tasks)
 
-# call :say on each element in parallel and waits for all of them to finish
+# call :say on each element in parallel and waits for them to finish
 runner.run(:say)
 ```
 
-If you run the example in Interactive Ruby you should see "foofoofoofoofoo”
+If you run the example above you should see "foofoofoofoofoo”
 
 ## Configuration
 
-Change the global default configuration for all TaskRunners
+Change the global default configuration for all runners
 
 ```ruby
 TaskRunner.config do |t|
