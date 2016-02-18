@@ -11,4 +11,6 @@ Gem::Specification.new do |s|
   s.files       = ["lib/task_runner.rb", "README.md", "LICENSE"]
   s.homepage    = "https://github.com/chrisledet/task_runner"
   s.license     = "MIT"
+
+  s.add_development_dependency "rspec", ">= 3.4.0"
 end
